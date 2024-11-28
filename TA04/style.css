@@ -1,0 +1,341 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto gris claro */
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transición de colores */
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #1E88E5; /* Azul claro */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: fadeIn 1.5s ease-out;
+}
+
+header h1 {
+    font-size: 3em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: slideIn 0.5s ease-in;
+}
+
+/* Navegación */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #e0e0e0;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff; /* Blanco para el hover */
+    transform: translateY(-5px); /* Efecto de elevación */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Resplandor en el texto */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+/* Contenedor principal */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #333; /* Fondo oscuro */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Estilos para proyectos destacados */
+.proyectos-destacados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas para los proyectos */
+    gap: 30px;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+article {
+    padding: 20px;
+    border: 1px solid #2c2c2c;
+    border-radius: 12px;
+    background-color: #424242; /* Fondo gris oscuro */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-10px); /* Efecto hover más marcado */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+article h3 {
+    margin-bottom: 15px;
+    color: #64b5f6; /* Azul cielo claro */
+    font-size: 1.8em;
+    text-transform: capitalize;
+}
+
+article p {
+    margin-bottom: 15px;
+    color: #bdbdbd; /* Texto gris medio */
+}
+
+article a {
+    align-self: flex-start;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #64b5f6; /* Azul cielo claro */
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+article a:hover {
+    background-color: #2196f3; /* Azul fuerte */
+    transform: scale(1.1); /* Efecto de escala */
+}
+
+/* Página de detalle de cada proyecto */
+.proyecto-detalle h2 {
+    font-size: 2.8em;
+    color: #64b5f6; /* Azul cielo claro */
+    margin-bottom: 30px;
+}
+
+.proyecto-detalle .imagen {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    background-color: #212121;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto-detalle p {
+    color: #bdbdbd;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+/* Imagen secundaria */
+.proyecto-detalle .imagen-secundaria {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    background-color: #212121;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+/* Estilo del formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+form label {
+    font-weight: bold;
+    color: #fff;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #64b5f6; /* Azul cielo claro */
+    outline: none;
+}
+
+form button {
+    width: 150px;
+    padding: 12px;
+    background-color: #64b5f6; /* Azul cielo claro */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2196f3; /* Azul fuerte */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Footer */
+footer {
+    background-color: #64b5f6; /* Azul cielo claro */
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.95em;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #64b5f6; /* Azul cielo claro */
+    margin: 0 12px;
+    font-size: 1.8em;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #2196f3; /* Azul fuerte */
+    transform: scale(1.2); /* Efecto de escala en los iconos sociales */
+}
+
+.ver-todos-btn {
+    display: inline-block;
+    background-color: #64b5f6; /* Azul cielo claro */
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ver-todos-btn:hover {
+    background-color: #2196f3; /* Azul fuerte */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Estilo para la imagen de perfil */
+.foto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Imagen redonda */
+    border: 3px solid #64b5f6; /* Borde azul cielo claro alrededor de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    object-fit: cover; /* Asegura que la imagen se recorte y ajuste sin deformarse */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #64b5f6; /* Azul cielo claro */
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #2196f3; /* Azul fuerte */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #2196f3; /* Azul fuerte */
+}
+
+/* Fondo animado con gradiente */
+body {
+    background: linear-gradient(45deg, #1E88E5, #64b5f6);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+/* Animación de fondo */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
