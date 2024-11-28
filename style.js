@@ -1,4 +1,4 @@
-Document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const githubUsername = 'cescmr';  // El teu nom d'usuari de GitHub
   const repoName = 'cesc_itb2425_mds';  // Nom del repositori
   const filePath = 'TA02/comprovarEdat.py';  // Fitxer que vols mostrar
